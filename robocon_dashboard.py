@@ -14,17 +14,20 @@ st.markdown("""
 <style>
     .return-button {
         display: inline-block;
-        background-color: #2980b9;
-        color: white;
+        background-color: white;
+        color: #2980b9;
         padding: 10px 20px;
         text-decoration: none;
         border-radius: 5px;
         font-size: 16px;
         margin-bottom: 20px;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
+        border: 2px solid #2980b9;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .return-button:hover {
-        background-color: #1a5276;
+        background-color: #2980b9;
+        color: white;
     }
     .nav-container {
         text-align: left;
@@ -377,7 +380,7 @@ with cols[0]:
     <ul>
         <li>Python编程基础</li>
         <li>了解OpenCV者优先</li>
-        <li>具备基本数学基础</li>
+        <li>ROS2基础</li>
     </ul>
     </div>
     <div class="learning">
@@ -392,26 +395,26 @@ with cols[0]:
 </div>
 ''', unsafe_allow_html=True)
 
-# 协调组卡片
+# 运营组卡片
 with cols[1]:
     st.markdown('''
 <div class="card">
-    <div class="card-header">协调组</div>
+    <div class="card-header">硬件组</div>
     <div class="requirement">
     <strong>需要基础:</strong>
     <ul>
         <li>良好沟通能力</li>
-        <li>活动策划经验</li>
-        <li>基本文档撰写能力</li>
+        <li>了解基本通识知识</li>
+        <li>热心，善于沟通</li>
     </ul>
     </div>
     <div class="learning">
     <strong>可以学到:</strong>
     <ul>
-        <li>项目管理技能</li>
-        <li>团队协作与领导力</li>
-        <li>宣传推广与新媒体运营</li>
-        <li>技术文档与报告撰写</li>
+        <li>精通立创EDA</li>
+        <li>焊工+基础的代码能力</li>
+        <li>查各种线路故障</li>
+        <li>做线、给车子布线</li>
     </ul>
     </div>
 </div>
@@ -435,7 +438,6 @@ with col2:
 
 st.success('零基础同学也可申请，我们提供系统培训！优秀者可获得保研加分、竞赛获奖证书及企业实习机会。')
 
-st.info('注: 以上信息参考国内高校Robocon团队通用架构,具体以西安交大Robocon机器人队实际设置为准。官方照片将在获取后更新。')
 
 # 数据来源说明
 with st.container():
