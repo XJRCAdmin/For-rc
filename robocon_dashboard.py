@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# 设置页面配置
 st.set_page_config(
     page_title="西安交大Robocon历年成绩展示",
     page_icon=":robot:",
@@ -13,6 +12,24 @@ st.set_page_config(
 # 自定义CSS样式
 st.markdown("""
 <style>
+    .return-button {
+        display: inline-block;
+        background-color: #2980b9;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s;
+    }
+    .return-button:hover {
+        background-color: #1a5276;
+    }
+    .nav-container {
+        text-align: left;
+        margin-bottom: 10px;
+    }
     .main-header {
         font-size: 2.5rem;
         color: #1a5276;
@@ -50,6 +67,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# 返回按钮
+st.markdown('''
+<div class="nav-container">
+    <a href="https://xjturc.vercel.app/" class="return-button">← 返回主页</a>
+</div>
+''', unsafe_allow_html=True)
+
 # 页面标题
 st.markdown('<h1 class="main-header">西安交通大学Robocon机器人队历年成绩展示</h1>', unsafe_allow_html=True)
 
@@ -58,11 +82,11 @@ with st.container():
     st.markdown('<h2 class="sub-header">团队简介</h2>', unsafe_allow_html=True)
     col1, col2 = st.columns([1, 2])
     with col1:
-        st.image("https://i.imgur.com/placeholder.png", caption="西安交大Robocon机器人队", use_container_width=True)
+        st.image("pic/rc.jpg", caption="西安交大Robocon机器人队", use_container_width=True)
     with col2:
         st.markdown("""
         西安交通大学机器人俱乐部(ABU ROBOCON机器人队)成立于2001年10月，连续参赛23年。
-        队员秉承"优秀是我们的习惯，拼搏是我们的传统"队训，刻苦努力、不断奋进。
+        队员秉承"优秀是我们的习惯，拼搏是我们的传统"队训，刻苦努力、不断前进。
         
         作为国内首支获得国际冠军的队伍，西安交大Robocon机器人队在历届大赛中屡创佳绩，
         培养了大批优秀的工程技术人才，为国家科技创新事业做出了积极贡献。
